@@ -553,7 +553,7 @@ void __assert_func(const char *file, int line, const char *func, const char *exp
 #include "esp8266/pin_mux_register.h"
 #include "esp8266/rom_functions.h"
 
-#define BOOTLOADER_CONSOLE_CLK_FREQ 52 * 1000 * 1000
+#define BOOTLOADER_CONSOLE_CLK_FREQ ((CONFIG_ESP8266_XTAL_FREQ * 2) * 1000 * 1000)
 
 extern int _bss_start;
 extern int _bss_end;
